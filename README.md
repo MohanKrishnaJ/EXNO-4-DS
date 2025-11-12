@@ -123,10 +123,3 @@ selected_features=X.columns[selected_feature_indices]
 print("Selected Features:")
 print(selected_features)
 ```
-<img width="663" height="86" alt="image" src="https://github.com/user-attachments/assets/d6c44747-9770-42f4-bbe2-db7f6778dfad" />
-
-```
-
-# RESULT:
-Feature scaling and feature selection process has been successfullyperformed on the data set.
-    
