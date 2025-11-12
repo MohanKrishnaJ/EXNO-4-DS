@@ -98,9 +98,9 @@ print(contingency_table)
 ```
 <img width="602" height="135" alt="image" src="https://github.com/user-attachments/assets/bc9ca472-838b-4e8c-9fb1-1ad1797bfff8" />
 ```
-     chi2,p,_,_=chi2_contingency(contingency_table)
-     print(f"Chi-squared statistic: {chi2}")
-     print(f"P-value: {p}")
+chi2,p,_,_=chi2_contingency(contingency_table)
+print(f"Chi-squared statistic: {chi2}")
+print(f"P-value: {p}")
 
 ```
 <img width="740" height="81" alt="image" src="https://github.com/user-attachments/assets/52eb088a-bc22-49b1-99a3-b8110f76cf16" />
