@@ -31,69 +31,80 @@ import numpy as np
 df=pd.read_csv("/content/bmi.csv")
 df.head()
 ```
-![image](https://github.com/user-attachments/assets/b27936e6-a167-4093-b9f4-b07893d9121a)
+<img width="700" height="314" alt="image" src="https://github.com/user-attachments/assets/6839c903-8363-4769-914d-091a97df3f57" />
+
 ```
 df.dropna()
 ```
-![image](https://github.com/user-attachments/assets/0d8c3b19-c77d-497f-84dc-897328487f69)
+<img width="774" height="609" alt="image" src="https://github.com/user-attachments/assets/f793d0a5-02fa-4105-9af9-259395524084" />
+
 ```
 max_vals = df[['Height', 'Weight']].abs().max()
 print(max_vals)
 ```
-![image](https://github.com/user-attachments/assets/4772d234-84e7-4322-9e11-a161e7708303)
+<img width="491" height="114" alt="image" src="https://github.com/user-attachments/assets/776d5b8b-516b-4660-ba4c-4f72662f98d9" />
+
 ```
 from sklearn.preprocessing import StandardScaler
 sc=StandardScaler()
 df[['Height','Weight']]=sc.fit_transform(df[['Height','Weight']])
 df.head(10)
 ```
-![image](https://github.com/user-attachments/assets/552dd1b7-59b1-4f65-aa02-1850bda3550d)
+<img width="775" height="546" alt="image" src="https://github.com/user-attachments/assets/4eeeb4a8-1296-48e1-8c5d-6420d5ebef3d" />
+
 ```
 from sklearn.preprocessing import MinMaxScaler
 scalar=MinMaxScaler()
 df[['Height','Weight']]=scalar.fit_transform(df[['Height','Weight']])
 df.head(10)
 ```
-![image](https://github.com/user-attachments/assets/142b4d30-871a-4f0a-b79d-e4cbac1e396d)
+<img width="781" height="538" alt="image" src="https://github.com/user-attachments/assets/6f83d9b5-4186-445f-8d49-fe621c8d9c72" />
+
 ```
 from sklearn.preprocessing import Normalizer
 scaler=Normalizer()
 df[['Height','Weight']]=scaler.fit_transform(df[['Height','Weight']])
 df
 ```
-![image](https://github.com/user-attachments/assets/68acbfe7-36be-43e1-ac2f-83855f3082d3)
+<img width="738" height="622" alt="image" src="https://github.com/user-attachments/assets/3fc3ef76-3d85-4201-bc30-b2987e6c6f63" />
+
 ```
 from sklearn.preprocessing import MaxAbsScaler
 scaler=MaxAbsScaler()
 df[['Height','Weight']]=scaler.fit_transform(df[['Height','Weight']])
 df
 ```
-![image](https://github.com/user-attachments/assets/b55c6651-e63b-4640-96dd-e01d396ba4bb)
+<img width="766" height="627" alt="image" src="https://github.com/user-attachments/assets/a9c1347e-6864-4a8d-b0da-ae6d6119dd51" />
+
 ```
 from sklearn.preprocessing import RobustScaler
 scaler=RobustScaler()
 df[['Height','Weight']]=scaler.fit_transform(df[['Height','Weight']])
 df.head()
 ```
-![image](https://github.com/user-attachments/assets/7c514574-e1e9-4e9c-962b-d8855d787ed9)
+<img width="739" height="329" alt="image" src="https://github.com/user-attachments/assets/9bab1f96-bada-4783-b5b8-6f59166dae55" />
+
 ```
 from scipy.stats import chi2_contingency
 import seaborn as sns
 tips=sns.load_dataset('tips')
 tips.head()
 ```
-![image](https://github.com/user-attachments/assets/5ca9640b-02cc-4746-aa90-1bbebe252264)
+<img width="877" height="314" alt="image" src="https://github.com/user-attachments/assets/134981ce-3964-4214-acd4-e222968e5048" />
+
 ```
 contingency_table=pd.crosstab(tips['sex'],tips['time'])
 print(contingency_table)
 ```
-![image](https://github.com/user-attachments/assets/c5ce430c-d5f3-4c71-b24b-8959f9a05ad1)
+<img width="413" height="134" alt="image" src="https://github.com/user-attachments/assets/2d3729ee-c655-468a-bef4-86cf262e3dfc" />
+
 ```
 chi2,p,_,_=chi2_contingency(contingency_table)
 print(f"Chi-squared statistic: {chi2}")
 print(f"P-value: {p}")
 ```
-![image](https://github.com/user-attachments/assets/ef24a304-d0df-4406-8b55-f6c8998f6954)
+<img width="626" height="79" alt="image" src="https://github.com/user-attachments/assets/e98fc665-12b5-4ef3-a75c-6f8d68cad67c" />
+
 ```
 from sklearn.feature_selection import SelectKBest,mutual_info_classif,f_classif
 data={
@@ -112,7 +123,8 @@ selected_features=X.columns[selected_feature_indices]
 print("Selected Features:")
 print(selected_features)
 ```
-![image](https://github.com/user-attachments/assets/c1a0a8a0-c93c-493f-a064-60d7fbf1ef42)
+<img width="591" height="102" alt="image" src="https://github.com/user-attachments/assets/39a6501d-fa5b-47b7-bedd-72fe50f0ab7c" />
+
 
 
 # RESULT:
