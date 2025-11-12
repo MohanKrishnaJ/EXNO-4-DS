@@ -103,7 +103,6 @@ print(f"Chi-squared statistic: {chi2}")
 print(f"P-value: {p}")
 
 ```
-<img width="740" height="81" alt="image" src="https://github.com/user-attachments/assets/52eb088a-bc22-49b1-99a3-b8110f76cf16" />
 ```
 from sklearn.feature_selection import SelectKBest,mutual_info_classif,f_classif
 data={
@@ -122,7 +121,6 @@ selected_features=X.columns[selected_feature_indices]
 print("Selected Features:")
 print(selected_features)
 ```
-<img width="748" height="102" alt="image" src="https://github.com/user-attachments/assets/08f76f20-29d9-4d94-b7dd-8c85b97456ea" />
 
 
 # RESULT:
