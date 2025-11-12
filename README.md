@@ -1,4 +1,4 @@
-# EXNO:4-DS
+<img width="910" height="375" alt="image" src="https://github.com/user-attachments/assets/39b1783a-efd0-4a6f-b74b-635f59e5fc32" /><img width="885" height="452" alt="image" src="https://github.com/user-attachments/assets/32d1d7d2-fd3d-416c-8f26-0a5850c8c5dc" /># EXNO:4-DS
 # AIM:
 To read the given data and perform Feature Scaling and Feature Selection process and save the
 data to a file.
@@ -31,69 +31,78 @@ import numpy as np
 df=pd.read_csv("/content/bmi.csv")
 df.head()
 ```
-![image](https://github.com/user-attachments/assets/b27936e6-a167-4093-b9f4-b07893d9121a)
+<img width="826" height="393" alt="image" src="https://github.com/user-attachments/assets/7a808040-ebec-4377-ab6e-3a503663f184" />
+
 ```
 df.dropna()
 ```
-![image](https://github.com/user-attachments/assets/0d8c3b19-c77d-497f-84dc-897328487f69)
+<img width="589" height="618" alt="image" src="https://github.com/user-attachments/assets/912f137c-9c27-4eae-8c51-32b64dee67d5" />
+
 ```
 max_vals = df[['Height', 'Weight']].abs().max()
 print(max_vals)
 ```
-![image](https://github.com/user-attachments/assets/4772d234-84e7-4322-9e11-a161e7708303)
+<img width="705" height="104" alt="image" src="https://github.com/user-attachments/assets/7639070d-f51a-4647-a40b-eba27713f7a9" />
+
 ```
 from sklearn.preprocessing import StandardScaler
 sc=StandardScaler()
 df[['Height','Weight']]=sc.fit_transform(df[['Height','Weight']])
 df.head(10)
 ```
-![image](https://github.com/user-attachments/assets/552dd1b7-59b1-4f65-aa02-1850bda3550d)
+<img width="857" height="543" alt="image" src="https://github.com/user-attachments/assets/43b5c967-c34a-45e8-b86c-f7dba6f381de" />
+
 ```
 from sklearn.preprocessing import MinMaxScaler
 scalar=MinMaxScaler()
 df[['Height','Weight']]=scalar.fit_transform(df[['Height','Weight']])
 df.head(10)
 ```
-![image](https://github.com/user-attachments/assets/142b4d30-871a-4f0a-b79d-e4cbac1e396d)
+<img width="800" height="557" alt="image" src="https://github.com/user-attachments/assets/9aa4ba68-7b72-4f21-9344-1113f653ad72" />
+
 ```
 from sklearn.preprocessing import Normalizer
 scaler=Normalizer()
 df[['Height','Weight']]=scaler.fit_transform(df[['Height','Weight']])
 df
 ```
-![image](https://github.com/user-attachments/assets/68acbfe7-36be-43e1-ac2f-83855f3082d3)
+<img width="858" height="628" alt="image" src="https://github.com/user-attachments/assets/922f1a67-2180-4329-a2a4-c69045a680da" />
+
 ```
 from sklearn.preprocessing import MaxAbsScaler
 scaler=MaxAbsScaler()
 df[['Height','Weight']]=scaler.fit_transform(df[['Height','Weight']])
 df
 ```
-![image](https://github.com/user-attachments/assets/b55c6651-e63b-4640-96dd-e01d396ba4bb)
+<img width="902" height="632" alt="image" src="https://github.com/user-attachments/assets/8e861499-748f-40cd-bbbe-0e703551656f" />
+
 ```
 from sklearn.preprocessing import RobustScaler
 scaler=RobustScaler()
 df[['Height','Weight']]=scaler.fit_transform(df[['Height','Weight']])
 df.head()
 ```
-![image](https://github.com/user-attachments/assets/7c514574-e1e9-4e9c-962b-d8855d787ed9)
+<img width="885" height="452" alt="image" src="https://github.com/user-attachments/assets/73c7af30-bf73-4bf0-a0fb-cb376f8f1002" />
+
 ```
 from scipy.stats import chi2_contingency
 import seaborn as sns
 tips=sns.load_dataset('tips')
 tips.head()
 ```
-![image](https://github.com/user-attachments/assets/5ca9640b-02cc-4746-aa90-1bbebe252264)
+<img width="910" height="375" alt="image" src="https://github.com/user-attachments/assets/ab723517-c7e7-476c-ac3e-14fea9d87331" />
+
 ```
 contingency_table=pd.crosstab(tips['sex'],tips['time'])
 print(contingency_table)
 ```
-![image](https://github.com/user-attachments/assets/c5ce430c-d5f3-4c71-b24b-8959f9a05ad1)
+<img width="602" height="135" alt="image" src="https://github.com/user-attachments/assets/bc9ca472-838b-4e8c-9fb1-1ad1797bfff8" />
 ```
 chi2,p,_,_=chi2_contingency(contingency_table)
 print(f"Chi-squared statistic: {chi2}")
 print(f"P-value: {p}")
 ```
-![image](https://github.com/user-attachments/assets/ef24a304-d0df-4406-8b55-f6c8998f6954)
+<img width="740" height="81" alt="image" src="https://github.com/user-attachments/assets/52eb088a-bc22-49b1-99a3-b8110f76cf16" />
 ```
 from sklearn.feature_selection import SelectKBest,mutual_info_classif,f_classif
 data={
@@ -112,7 +121,7 @@ selected_features=X.columns[selected_feature_indices]
 print("Selected Features:")
 print(selected_features)
 ```
-![image](https://github.com/user-attachments/assets/c1a0a8a0-c93c-493f-a064-60d7fbf1ef42)
+<img width="748" height="102" alt="image" src="https://github.com/user-attachments/assets/08f76f20-29d9-4d94-b7dd-8c85b97456ea" />
 
 
 # RESULT:
