@@ -97,3 +97,32 @@ contingency_table=pd.crosstab(tips['sex'],tips['time'])
 print(contingency_table)
 ```
 <img width="602" height="135" alt="image" src="https://github.com/user-attachments/assets/bc9ca472-838b-4e8c-9fb1-1ad1797bfff8" />
+```
+chi2,p,_,_=chi2_contingency(contingency_table)
+print(f"Chi-squared statistic: {chi2}")
+print(f"P-value: {p}")
+```
+![image](https://github.com/user-attachments/assets/ef24a304-d0df-4406-8b55-f6c8998f6954)
+```
+from sklearn.feature_selection import SelectKBest,mutual_info_classif,f_classif
+data={
+    'Feature1':[1,2,3,4,5],
+    'Feature2':['A','B','C','A','B'],
+    'Feature3':[0,1,1,0,1],
+    'Target':[0,1,1,0,1]
+}
+df=pd.DataFrame(data)
+X=df[['Feature1','Feature3']]
+y=df['Target']
+selector=SelectKBest(score_func=mutual_info_classif,k=1)
+X_new=selector.fit_transform(X,y)
+selected_feature_indices=selector.get_support(indices=True)
+selected_features=X.columns[selected_feature_indices]
+print("Selected Features:")
+print(selected_features)
+```
+![image](https://github.com/user-attachments/assets/c1a0a8a0-c93c-493f-a064-60d7fbf1ef42)
+
+
+# RESULT:
+Feature scaling and feature selection process has been successfullyperformed on the data set.
